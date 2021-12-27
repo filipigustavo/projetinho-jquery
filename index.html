@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="./css/all.css" rel="stylesheet" />
+  <title>Projetinho jQuery</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Nosso sistema em jQuery</h1>
+
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-create-category">Criar Categoria</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-create-product">Criar Produto</button>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <table class="table" id="products-list">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="4">Lista vazia =(</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-create-category" tabindex="-1" aria-labelledby="modalCreateCategory" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCreateCategoryLabel">Criar categoria</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="create-category">
+            <div>
+              <label class="form-label">Nome</label>
+              <input type="text" value="" name="name" placeholder="Exemplo" class="form-control" />
+            </div>
+          
+            <div class="d-block mt-2">
+              <button type="submit" class="btn btn-primary save-btn">
+                Salvar
+                <i class="fas fa-spinner fa-spin d-none"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-create-product" tabindex="-1" aria-labelledby="modalCreateProduct" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCreateProductLabel">Criar produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="create-product">
+            <div>
+              <label class="form-label">Categoria</label>
+              <select name="category" id="categories-select" class="form-select">
+                <option>Selectione uma categoria</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Nome</label>
+              <input type="text" value="" name="name" placeholder="Exemplo" class="form-control" />
+            </div>
+
+            <div>
+              <label class="form-label">Descrição</label>
+              <textarea name="description" class="form-control" rows="5"></textarea>
+            </div>
+          
+            <div class="d-block mt-2">
+              <button type="submit" class="btn btn-primary save-btn">
+                Salvar
+                <i class="fas fa-spinner fa-spin d-none"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
