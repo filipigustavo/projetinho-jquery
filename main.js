@@ -16,7 +16,7 @@ $(function () {
       </tr>`
     ))
 
-    $("#products-list").html(html)
+    $("#products-list tbody").html(html)
   }
 
   const loadProducts = () => {
